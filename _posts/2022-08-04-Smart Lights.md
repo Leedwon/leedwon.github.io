@@ -1,5 +1,5 @@
 ---
-title: Light automation - switching lights with cron and python
+title: Light automation - switching lights with cron and Python
 date: 2022-08-06
 categories: [Home Automation]
 tags: [Home Automation, DIY]
