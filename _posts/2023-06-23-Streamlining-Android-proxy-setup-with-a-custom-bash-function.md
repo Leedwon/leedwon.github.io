@@ -14,26 +14,7 @@ The traditional approach involves manually entering the Proxy settings on your d
 
 ## Introducing: A custom `adb` Bash Function
 
-This custom bash function simplifies the process by enhancing the basic adb command with two additional operations: `setProxy` and `resetProxy`.
-
-The `setProxy` command allows you to set up a proxy quickly. By passing an argument in the format ip:port, you can set the proxy to the specified IP address and port. For instance, to set up a proxy, you can type: `adb setProxy 192.168.1.111:8080`.
-
-Moreover if you can't remember the local IP address of your machine, don't worry - this function has you covered. It automatically retrieves your local IP and sets it as the proxy with `9090` port as default. To use this feature simple call `adb setProxy` without any arguments.
-
-The `resetProxy` operation resets the proxy settings.
-
-If the function receives arguments other than setProxy or resetProxy, it passes those arguments directly to the standard adb command, ensuring that this function can be a direct replacement for adb without affecting other operations.
-
-To incorporate this function into your workflow, copy it into your zshrc file and source the file.
-
-If you'd like to use a different port instead of the default 9090, simply replace it with your preferred port in lines 46 and 47:
-
-```Bash
-command adb shell settings put global http_proxy "$host_ip:9090"
-echo "Proxy set to $host_ip:9090"
-```
-
-```Bash
+```bash
 function adb() {
   if [[ $1 == "setProxy" ]]; then
     if [[ $# -eq 2 ]]; then
@@ -61,6 +42,25 @@ function adb() {
     command adb "$@"
   fi
 }
+```
+
+This custom bash function simplifies the process by enhancing the basic adb command with two additional operations: `setProxy` and `resetProxy`.
+
+The `setProxy` command allows you to set up a proxy quickly. By passing an argument in the format ip:port, you can set the proxy to the specified IP address and port. For instance, to set up a proxy, you can type: `adb setProxy 192.168.1.111:8080`.
+
+Moreover if you can't remember the local IP address of your machine, don't worry - this function has you covered. It automatically retrieves your local IP and sets it as the proxy with `9090` port as default. To use this feature simple call `adb setProxy` without any arguments.
+
+The `resetProxy` operation resets the proxy settings.
+
+If the function receives arguments other than setProxy or resetProxy, it passes those arguments directly to the standard adb command, ensuring that this function can be a direct replacement for adb without affecting other operations.
+
+To incorporate this function into your workflow, copy it into your zshrc file and source the file.
+
+If you'd like to use a different port instead of the default 9090, simply replace it with your preferred port in lines 46 and 47:
+
+```Bash
+command adb shell settings put global http_proxy "$host_ip:9090"
+echo "Proxy set to $host_ip:9090"
 ```
 
 I hope you find this useful, Happy Coding!
