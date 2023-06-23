@@ -52,15 +52,15 @@ Moreover if you can't remember the local IP address of your machine, don't worry
 
 The `resetProxy` operation resets the proxy settings.
 
-If the function receives arguments other than setProxy or resetProxy, it passes those arguments directly to the standard adb command, ensuring that this function can be a direct replacement for adb without affecting other operations.
+If the function receives arguments other than `setProxy` or `resetProxy`, it passes those arguments directly to the standard adb command, ensuring that this function can be a direct replacement for adb without affecting other operations.
 
-To incorporate this function into your workflow, copy it into your zshrc file and source the file.
+To incorporate this function into your workflow, copy it into your .zshrc file and source the file.
 
 If you'd like to use a different port instead of the default 9090, simply replace it with your preferred port in lines 46 and 47:
 
 ```Bash
-command adb shell settings put global http_proxy "$host_ip:9090"
-echo "Proxy set to $host_ip:9090"
+command adb shell settings put global http_proxy "$host_ip:your_port_goes_here"
+echo "Proxy set to $host_ip:your_port_goes_here"
 ```
 
 I hope you find this useful, Happy Coding!
