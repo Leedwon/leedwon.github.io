@@ -114,5 +114,5 @@ Happy coding! :)
 
 ## Resources
 
-- https://developer.android.com/training/articles/security-ssl
-- https://docs.mitmproxy.org/stable/howto-install-system-trusted-ca-android/
+- [https://developer.android.com/training/articles/security-ssl](https://developer.android.com/training/articles/security-ssl)
+- [https://docs.mitmproxy.org/stable/howto-install-system-trusted-ca-android/](https://developer.android.com/training/articles/security-ssl)
