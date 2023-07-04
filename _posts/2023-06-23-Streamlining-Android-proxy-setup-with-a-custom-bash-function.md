@@ -1,7 +1,7 @@
 ---
 title: Streamlining Android proxy setup with a custom bash function
 date: 2023-06-23
-categories: []
+categories: [Android]
 tags: [android]
 img_path: /assets/img/
 ---
