@@ -56,7 +56,7 @@ If the function receives arguments other than `setProxy` or `resetProxy`, it pas
 
 To incorporate this function into your workflow, copy it into your .zshrc file and source the file.
 
-If you'd like to use a different port instead of the default 9090, simply replace it with your preferred port in lines 46 and 47:
+If you'd like to use a different port instead of the default 9090, simply replace it with your preferred port in lines 18 and 19:
 
 ```bash
 command adb shell settings put global http_proxy "$host_ip:your_port_goes_here"
