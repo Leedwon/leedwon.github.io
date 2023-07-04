@@ -111,3 +111,8 @@ If you want to protect your app against it, consider implementing certificate pi
 However, setting it up is a topic for another article. 
 
 Happy coding! :)
+
+## Resources
+
+- https://developer.android.com/training/articles/security-ssl
+- https://docs.mitmproxy.org/stable/howto-install-system-trusted-ca-android/
