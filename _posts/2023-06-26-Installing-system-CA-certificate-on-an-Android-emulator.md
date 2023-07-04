@@ -91,7 +91,7 @@ Now, depending on the method you've chosen:
 
 **Creating hash on our own way:**
 - Pull the downloaded certificate to your machine by running `adb pull storage/emulated/0/Download/proxyman-ca.pem.crt /Users/<your_user_profile>/system-cert-demo/`, or choose other location that suits you best.
-- Generate the hash by running `hashed_name=`openssl x509 -inform PEM -subject_hash_old -in proxyman-ca.pem.crt | head -1`.
+- Generate the hash by running `hashed_name=openssl x509 -inform PEM -subject_hash_old -in proxyman-ca.pem.crt | head -1`.
 - Generate hash file by running `cp proxyman-ca.pem.crt $hashed_name.0`.
 
 Finally, regardless of the method you chose, follow these steps
