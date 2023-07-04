@@ -26,7 +26,7 @@ The proxy's ability to intercept traffic is interesting, but to decrypt HTTPS, a
 
 Remember when setting up the Proxy, you had to install a certificate on your device:
 
-![installing certificate](instaling-certificate.png)
+![installing certificate](installing-certificate.png)
 
 That's the magic trick. SSL proxy tools generate a fake certificate that we install on our device. 
 Without this installed certificate, your app would perceive the Proxy as a threat attempting to intercept the traffic. However, with the certificate in place,the Proxy is considered a trusted entity. This allows you to not just intercept, but also view the decrypted traffic.
