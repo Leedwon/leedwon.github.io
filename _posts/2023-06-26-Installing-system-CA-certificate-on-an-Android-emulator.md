@@ -94,7 +94,7 @@ Now, depending on the method you've chosen:
 - Generate the hash by running `hashed_name=openssl x509 -inform PEM -subject_hash_old -in proxyman-ca.pem.crt | head -1`.
 - Generate hash file by running `cp proxyman-ca.pem.crt $hashed_name.0`.
 
-Finally, regardless of the method you chose, follow these steps
+Finally, regardless of the method you chose, follow these steps:
 
 - Restart adb as root by running `adb root`.
 - Disable secure boot verification `adb shell avbctl disable-verification`.
