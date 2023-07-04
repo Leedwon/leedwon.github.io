@@ -35,7 +35,7 @@ Now that we've explained how the proxy and the certificate work together, you mi
 
 Well, this brings us to the next part of our Android journey - the world of certificate stores.
 
-## Certificate stores
+## Certificate stores & Network security configuration
 
 Starting with Android Nougat there are two certificate stores - System and User.
 
