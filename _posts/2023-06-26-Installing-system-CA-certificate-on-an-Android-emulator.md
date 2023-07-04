@@ -29,7 +29,7 @@ Remember when setting up the Proxy, you had to install a certificate on your dev
 ![installing certificate](installing-certificate.png)
 
 That's the magic trick. SSL proxy tools generate a fake certificate that we install on our device. 
-Without this installed certificate, your app would perceive the Proxy as a threat attempting to intercept the traffic. However, with the certificate in place,the Proxy is considered a trusted entity. This allows you to not just intercept, but also view the decrypted traffic.
+Without this certificate installed, your app would perceive the Proxy as a threat attempting to intercept the traffic. However, with the certificate in place,the Proxy is considered a trusted entity. This allows you to not just intercept, but also view the decrypted traffic.
 
 Now that we've explained how the proxy and the certificate work together, you might be thinking: "Wait a minute, if all it takes to decrypt the traffic is a certificate, why does it only work for my app?"
 
