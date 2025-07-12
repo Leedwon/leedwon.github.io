@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "jekyll-theme-chirpy", "~> 5.2", ">= 5.2.1"
+gem "jekyll-theme-chirpy", "~> 7.3.0"
 
 # helps with seo
 gem "jekyll-seo-tag"
