@@ -3,7 +3,6 @@ title: "Peeking into Android traffic: SSL Proxying and System Certificates"
 date: 2023-07-04
 categories: [Android]
 tags: [android, security]
-img_path: /assets/img/system-certificate
 ---
 
 As you continue on your Android debugging journey, you encounter a curious issue. There seems to be a problem with the data your app is sending to its server. So, you pull up your favorite proxy tool to take a closer look at the traffic. Before you know it, you've identified the problem and a fix is already brewing in your mind. But then, an interesting thought pops up: "What if I tried to check out other apps' traffic?".
@@ -26,12 +25,12 @@ The proxy's ability to intercept traffic is interesting, but to decrypt HTTPS, a
 
 Remember when setting up the Proxy, you had to install a certificate on your device:
 
-![installing certificate](installing-certificate.png)
+![installing certificate](/assets/img/system-certificate/installing-certificate.png)
 
 That's the magic trick. SSL proxy tools generate a fake certificate that we install on our device. 
 Without this certificate installed, your app would perceive the Proxy as a threat attempting to intercept the traffic. However, with the certificate in place,the Proxy is considered a trusted entity. This allows you to not just intercept, but also view the decrypted traffic.
 
-![proxy-diagram](proxy-diagram.png)
+![proxy-diagram](/assets/img/system-certificate/proxy-diagram.png)
 
 Now that we've explained how the proxy and the certificate work together, you might be thinking: "Wait a minute, if all it takes to decrypt the traffic is a certificate, why does it only work for my app?"
 
@@ -41,7 +40,7 @@ Well, this brings us to the next part of our Android journey - the world of cert
 
 Starting with Android Nougat there are two certificate stores - System and User.
 
-![certificate-stores](certificate-stores.png)
+![certificate-stores](/assets/img/system-certificate/certificate-stores.png)
 
 While setting Proxy you installed what's called User certificate.
 
@@ -55,7 +54,7 @@ Although Android defaults to System certificates, this setting can be modified t
 
 With all this knowledge in place, let's get our hands dirty and try to install a System certificate and decrypt some traffic.
 
-![typing-cat](typing-cat.gif)
+![typing-cat](/assets/img/system-certificate/typing-cat.gif)
 
 ## Installing system CA Certificate
 

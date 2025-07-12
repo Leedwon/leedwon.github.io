@@ -3,14 +3,13 @@ title: Streamlining Android proxy setup with a custom bash function
 date: 2023-06-23
 categories: [Android]
 tags: [android]
-img_path: /assets/img/
 ---
 
 As an Android developer or tester, you have likely had to deal with the challenges of intercepting network traffic for an Android device. Tools like [Charles](https://www.charlesproxy.com/) or [Proxyman](https://proxyman.io/) can be very useful in these scenarios, providing an intuitive way to monitor and manipulate the network requests and responses. But before these tools can work their magic, you first have to set up the proxy settings on your Android device or emulator, which can be an annoying process.
 
 The traditional approach involves manually entering the Proxy settings on your device, or remembering the adb command `adb shell settings put global http_proxy 192.168.1.111:8080`. Although these methods work, there's room for improvement.
 
-![setting proxy manually on the device](setting_proxy_manually.png)
+![setting proxy manually on the device](/assets//img//setting_proxy_manually.png)
 
 ## Introducing: A custom `adb` Bash Function
 
