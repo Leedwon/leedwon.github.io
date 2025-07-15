@@ -20,9 +20,9 @@ jobs:
           fetch-depth: 0  # for posts's lastmod
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1.110.0
+        uses: ruby/setup-ruby@v1.245.0
         with:
-          ruby-version: 3.0
+          ruby-version: 3.3
           bundler-cache: true
 
       - name: Deploy
